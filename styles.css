@@ -1,0 +1,192 @@
+@import url("https://fonts.googleapis.com/css2?family=Arvo&family=Cabin:ital@1&family=Kumbh+Sans:wght@400;700&family=Montserrat:wght@200;300;600&family=Nunito&family=Poppins:wght@200;400&family=Roboto:wght@100;300&family=Russo+One&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(hsl(273, 75%, 66%), hsl(240, 73%, 65%));
+  background-attachment: fixed;
+  font-family: "Kumbh Sans", "sans-serif";
+  font-size: 13px;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.main-wrapper {
+  min-height: 600px;
+  width: 1000px;
+  background-color: white;
+  border-radius: 20px;
+  display: grid;
+  grid-template-columns: 450px 1fr;
+  gap: 2rem;
+  box-shadow: 5px 10px 10px 10px rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+
+.left-section {
+  background-image: url(./images/bg-pattern-desktop.svg);
+  background-repeat: no-repeat;
+  background-position: 120% 75%;
+  overflow: hidden;
+}
+
+.img-container {
+  height: 100%;
+  width: 100%;
+}
+
+.img-container #women-image {
+  position: relative;
+  left: -15%;
+  top: 15%;
+}
+
+#box {
+  position: absolute;
+  left: -9.3%;
+  top: 40%;
+  z-index: 1;
+}
+
+.right-section {
+  padding-right: 1.4rem;
+}
+
+.title {
+  font-size: 2.5rem;
+  margin: 1.5rem 0;
+}
+
+label {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+}
+
+hr {
+  margin: 0.5rem 0;
+}
+
+.qna-section #answer {
+  display: none;
+}
+
+.question-section label {
+  font-weight: 400;
+  margin-top: 0.7rem;
+}
+
+/* ---------CSS Check box trick area---- */
+input[type="checkbox"]:checked ~ #answer {
+  display: inline;
+}
+
+input[type="checkbox"]:checked + label {
+  font-weight: 800;
+}
+input[type="checkbox"]:checked + label > .down-arrow {
+  transform: rotate(180deg);
+}
+
+label {
+  cursor: pointer;
+}
+
+input {
+  display: none;
+}
+/* ---------CSS Check box trick area ends here---- */
+
+.question {
+  font-size: 1.3rem;
+}
+
+#answer {
+  margin-bottom: 1.2rem;
+  font-size: 16px;
+}
+
+.qna-section {
+  display: flex;
+  flex-direction: column;
+}
+
+.accordian-wrapper {
+  margin-top: 1.5rem;
+}
+
+@media screen and (max-width: 1100px) {
+  ::-webkit-scrollbar {
+    display: none;
+  }
+
+  main {
+    margin-top: 30rem;
+  }
+
+  .main-wrapper {
+    display: flex;
+    flex-direction: column;
+    margin: 2rem auto;
+    width: 373px;
+  }
+
+  .title {
+    font-size: 35px;
+    text-align: center;
+  }
+
+  .accordian-wrapper {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    gap: 5px;
+    height: 500px;
+  }
+
+  .right-section {
+    padding: 0;
+    overflow: scroll;
+  }
+
+  .img-container #women-image {
+    position: absolute;
+    top: -33%;
+    right: 60%;
+    transform: scale(0.55);
+    filter: drop-shadow(0px 30px 10px hsl(271, 5%, 88%));
+  }
+  .img-container #box {
+    transform: scale(0.5);
+    position: absolute;
+    top: -13%;
+    left: 0%;
+  }
+
+  label {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    gap: 5px;
+  }
+
+  .question {
+    font-size: 17px;
+  }
+
+  .left-section {
+    background-image: none;
+    overflow: visible;
+  }
+
+  #answer {
+    font-size: 1.1rem;
+  }
+}
