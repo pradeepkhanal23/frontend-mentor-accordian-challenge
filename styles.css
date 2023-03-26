@@ -9,10 +9,8 @@
 body {
   background: linear-gradient(hsl(273, 75%, 66%), hsl(240, 73%, 65%));
   background-attachment: fixed;
-  font-family: "Kumbh Sans", "sans-serif";
-  font-size: 13px;
-  height: 100vh;
-  width: 100vw;
+  font-family: "Edu NSW ACT Foundation", "Montserrat Alternates", "sans-serif";
+  min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -42,13 +40,13 @@ body {
   width: 100%;
 }
 
-.img-container #women-image {
+.img-container img.women-image {
   position: relative;
   left: -15%;
   top: 15%;
 }
 
-#box {
+.img-container img.box {
   position: absolute;
   left: -9.3%;
   top: 40%;
